@@ -13,7 +13,7 @@ These scripts are designed to be executed on a freshly installed **Ubuntu Server
 ## Hardening
 
 ```bash
-sudo wget -O ./harden.sh https://raw.githubusercontent.com/daleatdizzion/hardening-focalfossa/main/harden.sh && sudo chmod +x ./harden.sh && sudo ./harden.sh
+sudo wget -O ./harden.sh https://raw.githubusercontent.com/daleatdizzion/harden-focalfossa/main/harden.sh && sudo chmod +x ./harden.sh && sudo ./harden.sh
 ```
 
 # Hardening Notes
