@@ -45,9 +45,9 @@ echo "FallbackNTP=ntp.ubuntu.com" | sudo tee -a /etc/systemd/timesyncd.conf
 
 #### update sysctl.conf
 ```bash
-wget -q -c https://raw.githubusercontent.com/conduro/ubuntu/main/sysctl.conf -O /etc/sysctl.conf
+wget --timeout=5 --tries=2 --quiet -c https://raw.githubusercontent.com/daleatdizzion/harden-focalfossa/main/sysctl.conf -O /etc/sysctl.conf
 ```
-```conf
+
 # IP Spoofing protection
 net.ipv4.conf.all.rp_filter = 1
 net.ipv4.conf.default.rp_filter = 1
