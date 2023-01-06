@@ -10,10 +10,10 @@ The harden.sh script is designed to (only) harden a fresh isntall of Ubuntu 20.0
 # Getting Started
 These scripts are designed to be executed on a freshly installed **Ubuntu Server 20.04** server. Run these from the working directory you wish to use on the local system.
 
-## Hardening Only via harden.sh
+## Hardening
 
 ```bash
-sudo wget -O ./harden.sh https://raw.githubusercontent.com/daleatdizzion/focal-fossa/main/harden.sh && sudo chmod +x ./harden.sh && sudo ./harden.sh
+sudo wget -O ./harden.sh https://raw.githubusercontent.com/daleatdizzion/hardening-focalfossa/main/harden.sh && sudo chmod +x ./harden.sh && sudo ./harden.sh
 ```
 
 # Hardening Notes
