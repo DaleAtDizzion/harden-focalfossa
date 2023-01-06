@@ -86,12 +86,12 @@ _task "update ntp servers"
 # replace systctl.conf with a hardened version
 _task "update sysctl.conf"
     _cmd 'sudo chmod 744 /etc/sysctl.conf && sudo rm /etc/sysctl.conf -f'
-    _cmd 'wget --timeout=5 --tries=2 --quiet -c https://raw.githubusercontent.com/daleatdizzion/focal-fossa/main/sysctl.conf -O /etc/sysctl.conf'
+    _cmd 'wget --timeout=5 --tries=2 --quiet -c https://raw.githubusercontent.com/daleatdizzion/harden-focalfossa/main/sysctl.conf -O /etc/sysctl.conf'
 
 # replace sshd_config with a hardened version
 _task "update sshd_config"
     _cmd 'sudo chmod 744 /etc/ssh/sshd_config && sudo rm /etc/ssh/sshd_config -f'
-    _cmd 'wget --timeout=5 --tries=2 --quiet -c https://raw.githubusercontent.com/daleatdizzion/focal-fossa/main/sshd.conf -O /etc/ssh/sshd_config'
+    _cmd 'wget --timeout=5 --tries=2 --quiet -c https://raw.githubusercontent.com/daleatdizzion/harden-focalfossa/main/sshd.conf -O /etc/ssh/sshd_config'
 
 # disable snapd
 _task "disable snapd"
@@ -116,7 +116,7 @@ _task "configure firewall"
 
 # sets session timeout to 15 minutes via autologout.sh
 _task "create 15 minute autologout "
-    _cmd 'sudo wget --timeout=5 --tries=2 --quiet -c https://raw.githubusercontent.com/daleatdizzion/focal-fossa/main/autologout.sh -O /etc/profile.d/autologout.sh'
+    _cmd 'sudo wget --timeout=5 --tries=2 --quiet -c https://raw.githubusercontent.com/daleatdizzion/harden-focalfossa/main/autologout.sh -O /etc/profile.d/autologout.sh'
     _cmd 'sudo chmod 0755 /etc/profile.d/autologout.sh'
 
 # configure automatic security update installation
